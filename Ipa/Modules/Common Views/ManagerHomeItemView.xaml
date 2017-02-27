@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:local="clr-namespace:Ipa;assembly=Ipa" 
+xmlns:Views="clr-namespace:Ipa;assembly=Ipa"  
+x:Class="Ipa.ManagerHomeItemView">
+<ContentView.Resources>
+		<ResourceDictionary>
+<!--			<OnPlatform x:TypeArguments="x:Int32" Android="68" iOS="62" x:Key="HeaderRowHeight" />-->
+<!--						<OnPlatform x:TypeArguments="x:Double" Android="138" iOS="130" x:Key="Height" />-->
+
+						<OnPlatform x:TypeArguments="x:Int32" Android="84" iOS="82" x:Key="ActivityRowHeight" />
+			</ResourceDictionary>
+			</ContentView.Resources>
+	<ContentView.Content>
+	<StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+	<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,10">
+				<Label Text="ENROLLED COURSE(S)" Font="{x:Static local:Constants.FontStyle}" HeightRequest="42" VerticalTextAlignment="End" TextColor="#FFFFFF" FontSize="12" />
+			</StackLayout>
+			<ListView 
+				x:Name="ManagerCourseList" 
+				ItemsSource="{Binding ManagerCourseList}" 
+				SelectedItem="{Binding SelectedCourse, Mode=TwoWay}" 
+				SeparatorVisibility="None" 
+				RowHeight="68"
+				HeightRequest="260"
+				BackgroundColor="White"
+				HorizontalOptions="FillAndExpand" 
+				VerticalOptions="Fill">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.View>
+								<Views:ManagerCourseItemView CourseFullName="{Binding CourseFullName}" TimeSource="{Binding TimeSource}" TimeDescription="{Binding CourseStatus}" ReporteeStatus="{Binding TotalReportee}" />
+							</ViewCell.View>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,10">
+				<Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="End" HeightRequest="42" TextColor="#8A8A8A" FontSize="12" />
+			</StackLayout>
+			<ListView 
+				x:Name="ManagerActivityList" 
+				ItemsSource="{Binding ManagerActivityList}" 
+				SeparatorVisibility="None" 
+                RowHeight="{StaticResource ActivityRowHeight}"
+				BackgroundColor="White"
+				SelectedItem="{Binding SelectedActivity, Mode=TwoWay}"
+				HorizontalOptions="FillAndExpand" 
+				VerticalOptions="Fill">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.View>
+								<Views:ActivityItemView ActivityName="{Binding ActivityName}" CourseName="{Binding CourseName}" StatusSource="{Binding TimeSource}" IndicatorText="{Binding TimeDescription}"/>
+							</ViewCell.View>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>
