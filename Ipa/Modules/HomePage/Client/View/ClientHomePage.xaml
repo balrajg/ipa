@@ -75,10 +75,11 @@
 					</StackLayout>
 				</StackLayout>
 				<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-					<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#485faa">
-						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
-							<Label Text="ENROLLED COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" TextColor="#FFFFFF" HeightRequest="42" VerticalTextAlignment="Center" FontSize="12" />
+					<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#FFFFFF">
+						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0" BackgroundColor="#485faa">
+							<Label Text="MY COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" TextColor="#FFFFFF" HeightRequest="42" VerticalTextAlignment="Center" FontSize="12" />
 						</StackLayout>
+            <Views:ListSeperator />
 						<ListView x:Name="ClientCourseList" ItemsSource="{Binding CourseList}" SelectedItem="{Binding SelectedCourse,Mode=TwoWay}" SeparatorVisibility="None" BackgroundColor="White" HorizontalOptions="FillAndExpand" RowHeight="{StaticResource HeaderRowHeight}" VerticalOptions="Fill">
 							<ListView.ItemTemplate>
 								<DataTemplate>

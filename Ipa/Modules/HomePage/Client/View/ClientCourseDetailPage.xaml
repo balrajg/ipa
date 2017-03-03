@@ -36,26 +36,28 @@ x:Class="Ipa.ClientCourseDetailPage">
 
     <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="50">
       <StackLayout Orientation="Horizontal"  BackgroundColor="#ef0f0f" HorizontalOptions="FillAndExpand">
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10,10,5,10">
-          <StackLayout HorizontalOptions="Start" Orientation="Horizontal" HeightRequest="25" WidthRequest="70" BackgroundColor="#485faa">
-            <StackLayout HorizontalOptions="Start"  Padding="8,0,0,0" VerticalOptions ="Center">
-              <Image Source="back_arrow.png" Style="{StaticResource BackArrowImage}" />
-              <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
-              </StackLayout.GestureRecognizers>
-            </StackLayout>
-            <StackLayout HorizontalOptions="End" VerticalOptions ="Center" WidthRequest="50">
-              <Label Text="BACK" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="14" />
-              <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
-              </StackLayout.GestureRecognizers>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+          <StackLayout HorizontalOptions="Start" Padding="10,10,5,10">
+            <StackLayout Orientation="Horizontal" HeightRequest="25" WidthRequest="70" BackgroundColor="#485faa">
+              <StackLayout HorizontalOptions="Start"  Padding="8,0,0,0" VerticalOptions ="Center">
+                <Image Source="back_arrow.png" Style="{StaticResource BackArrowImage}" />
+                <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
+              <StackLayout HorizontalOptions="End" VerticalOptions ="Center" WidthRequest="50">
+                <Label Text="BACK" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="14" />
+                <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
             </StackLayout>
           </StackLayout>
           <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="30,0,10,0">
             <Label Text="{Binding CourseFullName}"  TextColor="#FFFFFF" LineBreakMode="TailTruncation" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="14" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
               <Image Source="{Binding CourseSource}" HeightRequest="11" WidthRequest="11" />
-              <Label Text="{Binding CourseStatus}" TextColor="#42C0FB" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="12" />
+              <Label Text="{Binding CourseStatus}" TextColor="#FFFFFF" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="12" />
             </StackLayout>
           </StackLayout>
         </StackLayout>

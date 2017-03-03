@@ -35,7 +35,7 @@ BackgroundImage="loginBG.png">
 			<StackLayout  Spacing="0"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 				<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 					<StackLayout HorizontalOptions="FillAndExpand">
-            <StackLayout HorizontalOptions="FillAndExpand" Padding="20,80,20,20">
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="20,40,20,20">
               <Image Source="logo.png"   Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
             </StackLayout>
 						<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" Padding="40,0,40,0">

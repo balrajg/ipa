@@ -41,8 +41,14 @@
 				<Setter Property="HeightRequest" Value="42">
 				</Setter>
 			</Style>
+      <Style x:Key="BoxViewStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="5" />
+        <Setter Property="BackgroundColor" Value="#FFFFFF" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+      </Style>
+        
 			<OnPlatform x:TypeArguments="x:Int32" Android="72" iOS="62" x:Key="HeaderRowHeight" />
-			<OnPlatform x:TypeArguments="x:Int32" Android="84" iOS="82" x:Key="ActivityRowHeight" />
+			<OnPlatform x:TypeArguments="x:Int32" Android="80" iOS="82" x:Key="ActivityRowHeight" />
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
@@ -79,8 +85,9 @@
 				<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 					<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
 						<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
-							<Label Text="MY ENROLLED COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="33" TextColor="#FFFFFF" FontSize="12" />
+							<Label Text="MY COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="33" TextColor="#FFFFFF" FontSize="12" />
 						</StackLayout>
+            <Views:ListSeperator> </Views:ListSeperator>
 						<ListView 
 						x:Name="CourseList" 
 						ItemsSource="{Binding CourseList}" 
@@ -101,10 +108,12 @@
 								</DataTemplate>
 							</ListView.ItemTemplate>
 						</ListView>
+            <Views:ListSeperator> </Views:ListSeperator>
 						<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
-							<Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
+							<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
 						</StackLayout>
-						<ListView x:Name="ActivityList" ItemsSource="{Binding ActivityList}" SelectedItem="{Binding SelectedActivity,Mode=TwoWay}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowHeight="{StaticResource ActivityRowHeight}" BackgroundColor="White" SeparatorVisibility="None">
+            <Views:ListSeperator> </Views:ListSeperator>
+						<ListView x:Name="ActivityList" ItemsSource="{Binding ActivityList}"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowHeight="{StaticResource ActivityRowHeight}" BackgroundColor="White"  SeparatorVisibility="None">
 							<ListView.ItemTemplate>
 								<DataTemplate>
 									<ViewCell>

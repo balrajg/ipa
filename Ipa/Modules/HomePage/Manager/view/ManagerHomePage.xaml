@@ -101,12 +101,11 @@ Title="">
 						<!--	Participant View 	-->
 						<StackLayout Spacing="0" IsVisible="{Binding IsMe}" HorizontalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
 							<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-								<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
-									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
-										<Label Text="MY ENROLLED COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="33" TextColor="#FFFFFF" FontSize="12" />
+								<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" >
+									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
+										<Label Text="MY COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="33" TextColor="#FFFFFF" FontSize="12" />
 									</StackLayout>
-									<!--							ItemsSource="{Binding ParticipantCourseList}" 
-								SelectedItem="{Binding SelectedCourse,Mode=TwoWay}"-->
+							    <local:ListSeperator />
 									<ListView 
 									x:Name="CourseList" 
 									ItemsSource="{Binding ParticipantCourseList}" 
@@ -130,8 +129,9 @@ Title="">
 									</ListView>
 									<!--							 -->
 									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
-										<Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
+										<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
 									</StackLayout>
+                  <local:ListSeperator />
 									<ListView 
 									x:Name="ActivityList" 
 									ItemsSource="{Binding ParticipantActivityList}" 

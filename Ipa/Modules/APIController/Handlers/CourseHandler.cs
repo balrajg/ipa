@@ -68,6 +68,7 @@ namespace Ipa
 			if ((response != null) && (response.ResponseCode == "1000") ) {
 				successCallback?.Invoke (response);
 			} else {
+                
 				errorCallback?.Invoke ((ResponseBase)response); 
 			}
 		}

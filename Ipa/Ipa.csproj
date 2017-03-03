@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Ipa.cs" />
+    <Compile Include="Modules\Common Views\ListSeperator.xaml.cs">
+      <DependentUpon>ListSeperator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Common Views\LoadingPage.xaml.cs">
       <DependentUpon>LoadingPage.xaml</DependentUpon>
     </Compile>
@@ -747,6 +750,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Modules\Common Views\LoadingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\Common Views\ListSeperator.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

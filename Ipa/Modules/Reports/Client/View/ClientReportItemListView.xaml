@@ -50,8 +50,8 @@ x:Class="Ipa.ClientReportItemListView">
 	</ContentPage.Resources>
 	<ContentView.Content>
 	<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="100" Spacing="0" BackgroundColor="#EEEEEE">
-		<StackLayout Padding="10,0,0,10" HorizontalOptions="FillAndExpand" HeightRequest="40" Spacing="0">
-			<Label x:Name="Coursename" FontFamily="{x:Static local:Constants.FontStyle}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HeightRequest="44" TextColor="#8A8A8A" FontSize="12" />
+		<StackLayout Padding="10,0,0,10" HorizontalOptions="FillAndExpand" HeightRequest="40" Spacing="0" BackgroundColor="#485faa">
+			<Label x:Name="Coursename" FontFamily="{x:Static local:Constants.FontStyle}" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
 		</StackLayout>
 		<StackLayout Orientation="Horizontal" BackgroundColor="#FFFFFF" HorizontalOptions="FillAndExpand" HeightRequest="58" Spacing="0" Padding="10,0,10,0">
 			<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >

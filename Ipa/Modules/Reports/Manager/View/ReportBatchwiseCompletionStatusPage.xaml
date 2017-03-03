@@ -122,7 +122,7 @@ x:Class="Ipa.ReportBatchwiseCompletionStatusPage">
 						</StackLayout>
 						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,10,10,10" Orientation="Horizontal">
 							<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-								<Label Text="Lap Score"  Style="{StaticResource FeedBackName}" />
+								<Label Text="C@W SCORE"  Style="{StaticResource FeedBackName}" />
 								<Label Text="Overall Score" Style="{StaticResource FeedBack}" />
 							</StackLayout>
 							<Label Text="{Binding LapScore}" Style="{StaticResource FeedBackPercent}" />

@@ -84,9 +84,9 @@ x:Class="Ipa.ClientReportPage" Title="">
 						</ListView>
 					</StackLayout>
 			<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
-				<StackLayout Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
-					<StackLayout Padding="10,10,0,0" HorizontalOptions="FillAndExpand" HeightRequest="18">
-				<Label Text="PROGRAM WISE REPORT" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="#485faa" FontSize="12" />
+				<StackLayout Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="#3B495D">
+					<StackLayout Padding="10,10,0,10" HorizontalOptions="FillAndExpand" HeightRequest="18">
+				<Label Text="PROGRAM WISE REPORT" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontSize="12" />
 			</StackLayout>
 			<ListView 
 			x:Name="ProgamReportList" 

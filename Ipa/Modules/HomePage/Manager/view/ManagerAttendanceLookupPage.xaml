@@ -37,7 +37,7 @@ x:Class="Ipa.ManagerAttendanceLookupPage">
 			<Style x:Key="Day" TargetType="Label">
 				<Setter Property="VerticalTextAlignment" Value="Center" />
 				<Setter Property="FontSize" Value="12" />
-				<Setter Property="TextColor" Value="#42C0FB" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
 				<Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<OnPlatform x:TypeArguments="x:Int32" Android="58" iOS="52" x:Key="HeaderRowHeight" />
@@ -49,26 +49,28 @@ x:Class="Ipa.ManagerAttendanceLookupPage">
 
     <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="50">
       <StackLayout Orientation="Horizontal"  BackgroundColor="#ef0f0f" HorizontalOptions="FillAndExpand">
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10,10,5,10">
-          <StackLayout HorizontalOptions="Start" Orientation="Horizontal" HeightRequest="25" WidthRequest="70" BackgroundColor="#485faa">
-            <StackLayout HorizontalOptions="Start"  Padding="8,0,0,0" VerticalOptions ="Center">
-              <Image Source="back_arrow.png" Style="{StaticResource BackArrowImage}" />
-              <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
-              </StackLayout.GestureRecognizers>
-            </StackLayout>
-            <StackLayout HorizontalOptions="End" VerticalOptions ="Center" WidthRequest="50">
-              <Label Text="BACK" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="14" />
-              <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
-              </StackLayout.GestureRecognizers>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+          <StackLayout HorizontalOptions="Start" Padding="10,10,5,10">
+            <StackLayout Orientation="Horizontal" HeightRequest="25" WidthRequest="70" BackgroundColor="#485faa">
+              <StackLayout HorizontalOptions="Start"  Padding="8,0,0,0" VerticalOptions ="Center">
+                <Image Source="back_arrow.png" Style="{StaticResource BackArrowImage}" />
+                <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
+              <StackLayout HorizontalOptions="End" VerticalOptions ="Center" WidthRequest="50">
+                <Label Text="BACK" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="14" />
+                <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding BackBtnCmd}" />
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
             </StackLayout>
           </StackLayout>
-          <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="30,0,10,0">
-            <Label Text="{Binding ClassDate}" Style="{StaticResource Date}" />
-            <Label Text="{Binding ClassDay}" Style="{StaticResource Day}" />
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="30,0,10,0">
+              <Label Text="{Binding ClassDate}" Style="{StaticResource Date}" />
+              <Label Text="{Binding ClassDay}" Style="{StaticResource Day}" />
+            </StackLayout>
           </StackLayout>
-        </StackLayout>
 
       </StackLayout>
     </StackLayout>

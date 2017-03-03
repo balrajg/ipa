@@ -8,13 +8,13 @@ x:Class="Ipa.ClientCourseItemView">
 		<ResourceDictionary>
 			<Style x:Key="Activity" TargetType="StackLayout">
 				<Setter Property="Padding" Value="10,5,0,0" />
-				<Setter Property="BackgroundColor" Value="#FFFFFF" />
+				<Setter Property="BackgroundColor" Value="#eae8e8" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 				<Setter Property="Spacing" Value="0" />
 			</Style>
 			<Style x:Key="ActivityTime" TargetType="Label">
 				<Setter Property="FontSize" Value="11" />
-				<Setter Property="TextColor" Value="#B2B2B2" />
+				<Setter Property="TextColor" Value="#555555" />
 				<Setter Property="Font" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<Style x:Key="ReproteeImage" TargetType="Image">
@@ -40,9 +40,9 @@ x:Class="Ipa.ClientCourseItemView">
 		</ResourceDictionary>
 	</ContentView.Resources>
 	<ContentView.Content>
-		<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF" HeightRequest="{StaticResource HeaderRowHeight}" >
+		<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF" Padding="10,5,10,5" HeightRequest="{StaticResource HeaderRowHeight}" >
 			<StackLayout Style="{StaticResource Activity}">
-				<Label x:Name="Coursename" LineBreakMode="TailTruncation"  TextColor="#2D2D2D" FontSize="13" Font="{x:Static local:Constants.FontStyle}"/>
+				<Label x:Name="Coursename" LineBreakMode="TailTruncation"  TextColor="#000000" FontSize="13" Font="{x:Static local:Constants.FontStyle}"/>
 				<StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand">
 					<StackLayout Orientation="Horizontal" Padding="0,10,0,10" HorizontalOptions="FillAndExpand">
 						<Image x:Name="StatusSource" Style="{StaticResource StatusImage}" />
@@ -54,9 +54,7 @@ x:Class="Ipa.ClientCourseItemView">
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
-			<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
-				<BoxView Style="{StaticResource BoxViewStyle}" />
-			</StackLayout>
+			
 		</StackLayout>
 	</ContentView.Content>
 </ContentView>

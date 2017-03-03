@@ -14,7 +14,7 @@ namespace Ipa
 		public static readonly string EMPValue = "EMP";
 		public static readonly string FPValue = "FP";
 		public static readonly string OEValue = "OE";
-		public static readonly string APP_VERSION = "1.0.5";
+		public static readonly string APP_VERSION = "1.0.6";
 
 		public static readonly string OK_TEXT = "OK";
 		public static readonly string NETWORK_ERROR = "Check for Internet";

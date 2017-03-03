@@ -4,7 +4,7 @@
 		<ResourceDictionary>
 			<Style x:Key="Activity" TargetType="StackLayout">
 				<Setter Property="Padding" Value="10,10,0,5" />
-				<Setter Property="BackgroundColor" Value="#FFFFFF" />
+				<Setter Property="BackgroundColor" Value="#eae8e8" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 			</Style>
 			<Style x:Key="BoxViewStyle" TargetType="BoxView">
@@ -14,7 +14,7 @@
 			</Style>
 			<Style x:Key="ActivityTime" TargetType="Label">
 				<Setter Property="FontSize" Value="11" />
-				<Setter Property="TextColor" Value="#B2B2B2" />
+				<Setter Property="TextColor" Value="#555555" />
 				<Setter Property="Font" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<Style x:Key="CourseName" TargetType="Label">
@@ -37,8 +37,8 @@
 		</ResourceDictionary>
 	</ContentView.Resources>
 	<ContentView.Content>
-		<StackLayout x:Name="ActivityStackLayout1" IsEnabled="{Binding ActivityNameEnabled}">
-			<StackLayout x:Name="ActivityStackLayout" IsEnabled="{Binding PendingStatus}" BackgroundColor="#FFFFFF" HorizontalOptions="FillAndExpand" HeightRequest="{StaticResource HeaderRowHeight}">
+		<StackLayout x:Name="ActivityStackLayout1" BackgroundColor="#FFFFFF" IsEnabled="{Binding ActivityNameEnabled}" Padding="10,5,10,5">
+			<StackLayout x:Name="ActivityStackLayout" IsEnabled="{Binding PendingStatus}"  HorizontalOptions="FillAndExpand" HeightRequest="{StaticResource HeaderRowHeight}">
 				<StackLayout Style="{StaticResource Activity}" Orientation="Vertical">
 					<Label x:Name="activityName" LineBreakMode="TailTruncation" TextColor="#2D2D2D" HorizontalOptions="FillAndExpand" FontSize="13" Font="{x:Static local:Constants.FontStyle}" />
 					<Label x:Name="courseName" LineBreakMode="TailTruncation" Style="{StaticResource CourseName}" />
@@ -47,18 +47,18 @@
 						<Label x:Name="timeDescription" Style="{StaticResource ActivityTime}" />
 					</StackLayout>
 				</StackLayout>
-				<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
+				<!--<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
 					<BoxView Style="{StaticResource BoxViewStyle}" />
-				</StackLayout>
+				</StackLayout>-->
 				<StackLayout.Triggers>
 					<DataTrigger TargetType="StackLayout" Binding="{Binding Source={x:Reference ActivityStackLayout},&#xA;						 Path=IsEnabled}" Value="true">
-						<Setter Property="Opacity" Value="0.5" />
+						<!--<Setter Property="Opacity" Value="0.5" />-->
 					</DataTrigger>
 				</StackLayout.Triggers>
 			</StackLayout>
 			<StackLayout.Triggers>
 				<DataTrigger TargetType="StackLayout" Binding="{Binding Source={x:Reference ActivityStackLayout1},&#xA;						 Path=IsEnabled}" Value="true">
-					<Setter Property="Opacity" Value="0.5" />
+				<!--	<Setter Property="Opacity" Value="0.5" />-->
 				</DataTrigger>
 			</StackLayout.Triggers>
 		</StackLayout>

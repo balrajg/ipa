@@ -18,7 +18,7 @@ namespace Ipa
 		public ParticipantReportViewModel (List<Course> courseList)
 		{
 			GetDropDownList (courseList);
-			SelectedCourseItem = Color.White;
+			//SelectedCourseItem = Color.White;
 		}
 		private Color _SelectedCourseItem;
 
@@ -250,7 +250,7 @@ namespace Ipa
 		public async void OnCourseNameSelected()
 		{
 			if (SelectedCourse != null && SelectedCourse.CourseId != null) {
-				SelectedCourseItem = Color.Blue;
+				SelectedCourseItem = Color.Green;
 				await FetchUserReport (SelectedCourse.CourseId);
 				SelectedCourse = null;
 			}

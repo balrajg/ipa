@@ -15,9 +15,10 @@ x:Class="Ipa.ManagerHomeItemView">
 			</ContentView.Resources>
 	<ContentView.Content>
 	<StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
-	<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,10">
-				<Label Text="ENROLLED COURSE(S)" Font="{x:Static local:Constants.FontStyle}" HeightRequest="42" VerticalTextAlignment="End" TextColor="#FFFFFF" FontSize="12" />
+	<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0" BackgroundColor="#485faa">
+				<Label Text="MY COURSE(S)" Font="{x:Static local:Constants.FontStyle}" HeightRequest="42" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontSize="12" />
 			</StackLayout>
+    <Views:ListSeperator />
 			<ListView 
 				x:Name="ManagerCourseList" 
 				ItemsSource="{Binding ManagerCourseList}" 
@@ -38,9 +39,10 @@ x:Class="Ipa.ManagerHomeItemView">
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
-			<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,10">
-				<Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="End" HeightRequest="42" TextColor="#8A8A8A" FontSize="12" />
+			<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0" BackgroundColor="#485faa">
+				<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="42" TextColor="#FFFFFF" FontSize="12" />
 			</StackLayout>
+    <Views:ListSeperator />
 			<ListView 
 				x:Name="ManagerActivityList" 
 				ItemsSource="{Binding ManagerActivityList}" 
@@ -54,7 +56,7 @@ x:Class="Ipa.ManagerHomeItemView">
 					<DataTemplate>
 						<ViewCell>
 							<ViewCell.View>
-								<Views:ActivityItemView ActivityName="{Binding ActivityName}" CourseName="{Binding CourseName}" StatusSource="{Binding TimeSource}" IndicatorText="{Binding TimeDescription}"/>
+                <Views:ActivityItemView ActivityName="{Binding ActivityName}" CourseName="{Binding CourseName}" StatusSource="{Binding TimeSource}" IndicatorText="{Binding TimeDescription}"/>
 							</ViewCell.View>
 						</ViewCell>
 					</DataTemplate>

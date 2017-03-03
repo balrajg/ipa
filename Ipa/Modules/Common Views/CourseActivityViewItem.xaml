@@ -20,35 +20,32 @@ x:Class="Ipa.CourseActivityViewItem">
 			</Style>
 			<Style x:Key="ActivityName" TargetType="Label">
 				<Setter Property="VerticalTextAlignment" Value="Center" />
-				<Setter Property="TextColor" Value="#B2B2B2" />
+				<Setter Property="TextColor" Value="#000000" />
 				<Setter Property="FontSize" Value="13" />
 				<Setter Property="Font" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<Style x:Key="Activity" TargetType="StackLayout">
 				<Setter Property="Padding" Value="10,10,0,5" />
-				<Setter Property="BackgroundColor" Value="#FFFFFF" />
+				<Setter Property="BackgroundColor" Value="#eae8e8" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 			</Style>
 			<Style x:Key="ActivityDuration" TargetType="Label">
 				<Setter Property="VerticalTextAlignment" Value="Center" />
-				<Setter Property="TextColor" Value="#B2B2B2" />
+				<Setter Property="TextColor" Value="#555555" />
 				<Setter Property="FontSize" Value="11" />
 				<Setter Property="Font" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 		</ResourceDictionary>
 	</ContentView.Resources>
 	<ContentView.Content>
-	<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="44" BackgroundColor="#FFFFFF">
+	<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="44" BackgroundColor="#FFFFFF" Padding="10,5,10,5">
 		<StackLayout Style="{StaticResource Activity}">
 			<Label x:Name="Activityname" LineBreakMode="TailTruncation"  Style="{StaticResource ActivityName}" />
 			<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 				<Image x:Name="Status" Style="{StaticResource StatusImage}" />
 				<Label x:Name="Statusdescription" Style="{StaticResource ActivityDuration}" />
-			</StackLayout>
+			</StackLayout> 
 		</StackLayout>
-		<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
-				<BoxView Style="{StaticResource BoxViewStyle}" />
-			</StackLayout>
-		</StackLayout>
+	</StackLayout>
 	</ContentView.Content>
 </ContentView>

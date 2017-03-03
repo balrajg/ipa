@@ -14,14 +14,22 @@ x:Class="Ipa.ParticipantReportItemView">
 				<Setter Property="VerticalTextAlignment" Value="Center" />
 				<Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
+      <Style x:Key="AssFinalPercentage" TargetType="Label">
+				<Setter Property="FontSize" Value="15" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
+				<Setter Property="HorizontalTextAlignment" Value="End" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalTextAlignment" Value="Center" />
+				<Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
+			</Style>
 			<Style x:Key="AssessmentList" TargetType="Label">
 				<Setter Property="FontSize" Value="12" />
-				<Setter Property="TextColor" Value="#8A8A8A" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
 				<Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<Style x:Key="Assessment" TargetType="StackLayout">
 				<Setter Property="Orientation" Value="Horizontal" />
-				<Setter Property="Padding" Value="10,10,10,10" />
+				<Setter Property="Padding" Value="20,10,20,10" />
 				<Setter Property="HeightRequest" Value="40" />
 			</Style>
 			<Style x:Key="FeedBackList" TargetType="StackLayout">
@@ -37,6 +45,12 @@ x:Class="Ipa.ParticipantReportItemView">
 				<Setter Property="VerticalTextAlignment" Value="Center" />
 				<Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
+      <Style x:Key="AssNameLap" TargetType="Label">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="TextColor" Value="#FFFFFF" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{x:Static local:Constants.FontStyle}" />
+      </Style>
 			<Style x:Key="BoxViewStyle" TargetType="BoxView">
 				<Setter Property="HeightRequest" Value="1" />
 				<Setter Property="BackgroundColor" Value="#485faa" />
@@ -55,9 +69,9 @@ x:Class="Ipa.ParticipantReportItemView">
 		<StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
 			<StackLayout HeightRequest="65" Spacing="0">
 			<StackLayout Padding="10,10,5,0">
-				<Label Text="OVERALL SUMMARY REPORT"  FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" TextColor="#485faa" FontSize="12" VerticalTextAlignment="Center" />
+				<Label Text="OVERALL SUMMARY REPORT"  FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" TextColor="#FFFFFF" FontSize="12" VerticalTextAlignment="Center" />
 				<StackLayout Padding="0,0,0,0">
-				<Label Text="L1 FEEDBACK" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" TextColor="#8A8A8A" FontSize="12" />
+				<Label Text="L1 FEEDBACK" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontSize="12" />
 				</StackLayout>
 				</StackLayout>
 			</StackLayout>
@@ -94,26 +108,26 @@ x:Class="Ipa.ParticipantReportItemView">
 					</StackLayout>
 				</Grid>
 			</StackLayout>
-			<StackLayout Padding="10,0,0,10" HeightRequest="42">
-				<Label Text="L2 BELIEF PRE &amp; POST ASSESSMENT" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Style="{StaticResource AssessmentList}" VerticalTextAlignment="End" />
+			<StackLayout Padding="10,0,0,0" HeightRequest="42">
+				<Label Text="L2 BELIEF ASSESSMENT" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Style="{StaticResource AssessmentList}" VerticalTextAlignment="Center" />
 			</StackLayout>
 			<StackLayout BackgroundColor="White" Spacing="0">
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Total Belief Pre Score" Style="{StaticResource AssName}" />
+					<Label Text="Pre Belief" Style="{StaticResource AssName}" />
 					<Label Text="{Binding TotalBeliefPreScore}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout>
 					<BoxView Style="{StaticResource BoxViewStyle}" />
 				</StackLayout>
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Total Belief Post Score" Style="{StaticResource AssName}" />
+					<Label Text="Post Belief" Style="{StaticResource AssName}" />
 					<Label Text="{Binding TotalBeliefPostScore}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout>
 					<BoxView Style="{StaticResource BoxViewStyle}" />
 				</StackLayout>
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Overall Belief Change" Style="{StaticResource AssName}" />
+					<Label Text="Absolute Change" Style="{StaticResource AssName}" />
 					<Label Text="{Binding L2OverallBeliefChange}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout>
@@ -124,26 +138,26 @@ x:Class="Ipa.ParticipantReportItemView">
 					<Label Text="{Binding L2BChangeOnPotential}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 			</StackLayout>
-			<StackLayout Padding="10,0,0,10" HeightRequest="42">
-				<Label Text="L2 SKILL PRE &amp; POST ASSESSMENT" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Style="{StaticResource AssessmentList}" VerticalTextAlignment="End" />
+			<StackLayout Padding="10,0,0,0" HeightRequest="42">
+				<Label Text="L2 SKILL ASSESSMENT" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Style="{StaticResource AssessmentList}" VerticalTextAlignment="Center" />
 			</StackLayout>
 			<StackLayout BackgroundColor="#FFFFFF" Spacing="0">
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Total Skill Pre Score" Style="{StaticResource AssName}" />
+					<Label Text="Pre Skill" Style="{StaticResource AssName}" />
 					<Label Text="{Binding L2TotalSkillPreScore}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout Spacing="0">
 					<BoxView Style="{StaticResource BoxViewStyle}" />
 				</StackLayout>
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Total Skill Pre Score" Style="{StaticResource AssName}" />
+					<Label Text="Post Skill" Style="{StaticResource AssName}" />
 					<Label Text="{Binding L2TotalSkillPostScore}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout>
 					<BoxView Style="{StaticResource BoxViewStyle}" />
 				</StackLayout>
 				<StackLayout Style="{StaticResource Assessment}">
-					<Label Text="Overall Skill Change" Style="{StaticResource AssName}" />
+					<Label Text="Absolute Change" Style="{StaticResource AssName}" />
 					<Label Text="{Binding L2OverallSkillChange}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 				<StackLayout>
@@ -154,9 +168,9 @@ x:Class="Ipa.ParticipantReportItemView">
 					<Label Text="{Binding L2SChangeOnPotential}" Style="{StaticResource AssPercentage}" />
 				</StackLayout>
 			</StackLayout>
-			<StackLayout Orientation="Horizontal" Padding="10,10,10,10">
-				<Label Text="LAP SCORE" Style="{StaticResource AssName}" />
-				<Label Text="{Binding LapScore}" Style="{StaticResource AssPercentage}" />
+			<StackLayout Orientation="Horizontal" Padding="20,10,20,10">
+				<Label Text="C@W SCORE" Style="{StaticResource AssNameLap}" />
+				<Label Text="{Binding LapScore}" Style="{StaticResource AssFinalPercentage}" />
 			</StackLayout>
 		</StackLayout>
 	</ContentView.Content>

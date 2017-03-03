@@ -16,12 +16,12 @@ x:Class="Ipa.ParticipantCourseItemView"
 			</Style>
 			<Style x:Key="Activity" TargetType="StackLayout">
 				<Setter Property="Padding" Value="10,10,0,5" />
-				<Setter Property="BackgroundColor" Value="#FFFFFF" />
+				<Setter Property="BackgroundColor" Value="#eae8e8" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 			</Style>
 			<Style x:Key="ActivityTime" TargetType="Label">
 				<Setter Property="FontSize" Value="11" />
-				<Setter Property="TextColor" Value="#B2B2B2" />
+				<Setter Property="TextColor" Value="#555555" />
 				<Setter Property="Font" Value="{x:Static local:Constants.FontStyle}" />
 			</Style>
 			<Style x:Key="TimeList" TargetType="StackLayout">
@@ -36,17 +36,15 @@ x:Class="Ipa.ParticipantCourseItemView"
 		</ResourceDictionary>
 	</ContentView.Resources>
 	<ContentView.Content>
-		<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="70" BackgroundColor="#FFFFFF" Padding="0" Spacing="0">
+		<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="70" BackgroundColor="#FFFFFF" Padding="10,5,10,5" Spacing="0">
 			<StackLayout Style="{StaticResource Activity}">
-				<Label x:Name="Name" TextColor="#2D2D2D" FontSize="13" Font="{x:Static local:Constants.FontStyle}" />
+				<Label x:Name="Name" TextColor="#000000" FontSize="13" Font="{x:Static local:Constants.FontStyle}" />
 				<StackLayout Style="{StaticResource TimeList}">
 					<Image x:Name="Source" Style="{StaticResource StatusImage}" />
 					<Label x:Name="Status" Style="{StaticResource ActivityTime}" />
 				</StackLayout>
 			</StackLayout>
-			<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="End" Padding="10,0,0,0">
-				<BoxView Style="{StaticResource BoxViewStyle}" />
-			</StackLayout>
+			
 		</StackLayout>
 	</ContentView.Content>
 </ContentView>
