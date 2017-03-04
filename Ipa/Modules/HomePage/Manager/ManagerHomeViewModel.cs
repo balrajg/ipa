@@ -345,7 +345,7 @@ namespace Ipa
 						Debug.WriteLine ("Success" + responseAssessment.QuestionList);
 						AssessmentPage _AssessmentAttemptPage = new AssessmentPage ();
 						_AssessmentAttemptPage.BindingContext = new AssessmentAttemptViewModel (ParticipantSelectedActivity, responseAssessment.QuestionList);
-						NavigationHandler.GlobalNavigator.Navigation.PushAsync (_AssessmentAttemptPage);
+						NavigationHandler.GlobalNavigator.Navigation.PushModalAsync(_AssessmentAttemptPage);
 							ParticipantSelectedActivity=null;
 						IsBusy = false;
 					},

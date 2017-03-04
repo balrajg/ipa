@@ -96,7 +96,7 @@ Title="">
 							</local:SegmentedControl.Children>
 						</local:SegmentedControl>
 					</StackLayout>
-					<StackLayout Padding="0,0,0,10" VerticalOptions="FillAndExpand">
+					<StackLayout Padding="0,10,0,10" VerticalOptions="FillAndExpand">
 						<local:ManagerHomeItemView IsVisible="{Binding IsTeam}" />
 						<!--	Participant View 	-->
 						<StackLayout Spacing="0" IsVisible="{Binding IsMe}" HorizontalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
@@ -128,8 +128,8 @@ Title="">
 										</ListView.ItemTemplate>
 									</ListView>
 									<!--							 -->
-									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
-										<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="44" TextColor="#FFFFFF" FontSize="12" />
+									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
+										<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="42" TextColor="#FFFFFF" FontSize="12" />
 									</StackLayout>
                   <local:ListSeperator />
 									<ListView 

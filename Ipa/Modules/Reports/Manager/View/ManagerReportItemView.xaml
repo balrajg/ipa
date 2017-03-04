@@ -7,8 +7,8 @@ xmlns:local="clr-namespace:Ipa;assembly=Ipa"
 x:Class="Ipa.ManagerReportItemView">
 	<ContentView.Content>
 		<StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
-			<StackLayout Padding="10,0,0,10" HorizontalOptions="FillAndExpand" HeightRequest="38">
-				<Label Text="SUMMARY SCORE CARD" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" TextColor="#485faa" FontSize="12" />
+			<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" HeightRequest="38" BackgroundColor="#485faa">
+				<Label Text="SUMMARY SCORE CARD" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="#FFFFFF" FontSize="12" />
 			</StackLayout>
 			<ListView 
 			x:Name="OverallReportList" 

@@ -72,7 +72,7 @@ x:Class="Ipa.ManagerCourseDetailActivityPage">
 			<StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
 				<StackLayout x:Name="Completed" HorizontalOptions="FillAndExpand" Spacing="0" IsVisible="{Binding CanShowCompleted}">
 					<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
-						<Label Text="COMPLETED" Style="{StaticResource ActivityList}" TextColor="#FFFFF" />
+						<Label Text="COMPLETED" Style="{StaticResource ActivityList}" TextColor="#FFFFFF" />
 					</StackLayout>
 					<ListView 
 						x:Name="CompletedList" 

@@ -152,8 +152,9 @@ namespace Ipa
 		public void ExitAssessment(){
 //			Settings.Local.Set("IsClose",true);
 			MoveToCache();
-			//NavigationHandler.GlobalNavigator.Navigation.PopModalAsync (false);
-			NavigationHandler.GlobalNavigator.Navigation.PopModalAsync (true);
+            //NavigationHandler.GlobalNavigator.Navigation.PopModalAsync (false);
+           // NavigationHandler.GlobalNavigator.Navigation.PopAsync();
+            NavigationHandler.GlobalNavigator.Navigation.PopModalAsync (false);
 		}
 
 		public void MoveToCache(){
