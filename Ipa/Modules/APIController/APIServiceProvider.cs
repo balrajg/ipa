@@ -32,7 +32,7 @@ namespace Ipa
 					
 					IRestResponse<T> response = await client.Execute<T> (request);
                     string outputResponse = string.Format("ResponseData {0} RequestUrl {1}", JsonConvert.SerializeObject(response), request.Resource.ToString());
-					//Debug.WriteLine("Success:D "+ outputResponse);
+				    Debug.WriteLine("Success:D "+ outputResponse);
 
                     return response.Data;
 				}

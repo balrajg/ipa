@@ -10,7 +10,7 @@ namespace Ipa
 
 		public Color BorderColor {
 			get { return (Color)GetValue (BorderColorProperty); }
-			set { SetValue (BorderColorProperty, value); }
+			set { SetValue (BorderColorProperty, Color.Black); }
 		} 
 	}
 }

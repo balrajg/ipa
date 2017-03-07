@@ -114,7 +114,6 @@ Title="">
 									HorizontalOptions="FillAndExpand" 
 									RowHeight="{StaticResource HeaderRowHeight}" 
 									BackgroundColor="White" 
-									HeightRequest="{StaticResource Height}" 
 									VerticalOptions="Fill">
 										<ListView.ItemTemplate>
 											<DataTemplate>

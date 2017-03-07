@@ -80,16 +80,18 @@ x:Class="Ipa.ReportBatchwiseCompletionStatusPage">
         
 				<ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
 					<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#FFFFFF" Padding="0,7,0,0" Spacing="0">
-						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,10,10,10" Orientation="Horizontal">
+						<!--<StackLayout HorizontalOptions="FillAndExpand" Padding="10,10,10,10" Orientation="Horizontal">
 							<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 								<Label Text="L1 FeedBack Score" Style="{StaticResource FeedBackName}" />
 								<Label Text="OE-Overall Effectiveness of Program" Style="{StaticResource FeedBack}" />
 							</StackLayout>
 							<Label Text="{Binding L1FeedbackScore}" Style="{StaticResource FeedBackPercent}" />
 							</StackLayout>
-						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
+              	<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
 							<BoxView Style="{StaticResource BoxViewStyle}" />
 						</StackLayout>
+              -->
+					
 						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,10,10,10" Orientation="Horizontal">
 							<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 								<Label Text="Class Participation Score"  Style="{StaticResource FeedBackName}" />
@@ -102,7 +104,7 @@ x:Class="Ipa.ReportBatchwiseCompletionStatusPage">
 						</StackLayout>
 						<StackLayout HorizontalOptions="FillAndExpand" Padding="10,10,10,10" Orientation="Horizontal">
 							<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-								<Label Text="L1 Skill Assessment"  Style="{StaticResource FeedBackName}"/>
+								<Label Text="L2 Skill Assessment"  Style="{StaticResource FeedBackName}"/>
 								<Label Text="Change in Potential" Style="{StaticResource FeedBack}" />
 							</StackLayout>
 							<Label Text="{Binding L2SkillAssessment}" Style="{StaticResource FeedBackPercent}" />

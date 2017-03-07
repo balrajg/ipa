@@ -43,8 +43,19 @@ x:Class="Ipa.ClientReportPage" Title="">
 		<Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 			<StackLayout Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
 				<StackLayout Spacing="0" BackgroundColor="Teal">
+          
 					<RelativeLayout x:Name="RelativeStack" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-						<StackLayout BackgroundColor="#3B495D" 
+            <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=44}"
+           RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=100}">
+              <StackLayout   x:Name="selectCourseMenu"   HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" WidthRequest="100" Padding="10,12,10,10">
+                <Label x:Name="SelectCourseNameLabe" LineBreakMode="TailTruncation" Text="Select Course" FontFamily="{x:Static local:Constants.FontStyle}" TextColor="#FFFFFF" VerticalTextAlignment="Center" FontSize="15" />
+
+                <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding DropDownCmd}" />
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
+            </StackLayout>
+						<StackLayout 
 						RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=44}" 
 						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,ElementName=RelativeStack,Property=Width}">
 							<StackLayout Orientation="Horizontal" x:Name="CourseMenu"  HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" WidthRequest="110" Padding="10,10,10,10">
@@ -69,11 +80,11 @@ x:Class="Ipa.ClientReportPage" Title="">
 								<DataTemplate>
 									<ViewCell>
 										<ViewCell.View>
-											<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="20" Spacing="0" BackgroundColor="{Binding SelectedCourseItem}">
+											<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="20" Spacing="0" BackgroundColor="#c7d5ed">
 											<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0" HeightRequest="33" Spacing="0">
-												<Label  Text="{Binding ProgramName}" FontFamily="{x:Static local:Constants.FontStyle}" TextColor="#485faa" HorizontalOptions="Fill" LineBreakMode="TailTruncation" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" FontSize="13" />
+												<Label  Text="{Binding ProgramName}" FontFamily="{x:Static local:Constants.FontStyle}" TextColor="#888888" HorizontalOptions="Fill" LineBreakMode="TailTruncation" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" FontSize="13" />
 												</StackLayout>
-												<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0" Spacing="0">
+												<StackLayout HorizontalOptions="FillAndExpand" Padding="0,0,0,0" Spacing="0">
 													<BoxView Style="{StaticResource BoxViewStyle}" />
 												</StackLayout>
 											</StackLayout>
