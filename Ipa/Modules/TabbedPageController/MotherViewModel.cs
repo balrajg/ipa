@@ -140,10 +140,10 @@ namespace Ipa
 			ReportViewModel = reportViewModel;
 			reportPage.BindingContext = reportViewModel;
 
-			ForumPage forumPage = new ForumPage ();
-			ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
-			ForumViewModel = forumViewModel;
-			forumPage.BindingContext = forumViewModel;
+			//ForumPage forumPage = new ForumPage ();
+			//ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
+			//ForumViewModel = forumViewModel;
+			//forumPage.BindingContext = forumViewModel;
 
 			SettingPage settingPage = new SettingPage ();
 			SettingViewModel settingViewModel = new SettingViewModel ();
@@ -172,10 +172,10 @@ namespace Ipa
 			ReportViewModel = reportViewModel;
 			reportPage.BindingContext = reportViewModel;
 
-			ForumPage forumPage = new ForumPage ();
-			ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
-			ForumViewModel = forumViewModel;
-			forumPage.BindingContext = forumViewModel;
+			//ForumPage forumPage = new ForumPage ();
+			//ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
+			//ForumViewModel = forumViewModel;
+			//forumPage.BindingContext = forumViewModel;
 
 			SettingPage settingPage = new SettingPage ();
 			SettingViewModel settingViewModel = new SettingViewModel ();
@@ -204,10 +204,10 @@ namespace Ipa
 			ReportViewModel = reportViewModel;
 			reportPage.BindingContext = reportViewModel;
 
-			ForumPage forumPage = new ForumPage ();
-			ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
-			ForumViewModel = forumViewModel;
-			forumPage.BindingContext = forumViewModel;
+//			ForumPage forumPage = new ForumPage ();
+//			ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
+//			ForumViewModel = forumViewModel;
+//			forumPage.BindingContext = forumViewModel;
 
 			SettingPage settingPage = new SettingPage ();
 			SettingViewModel settingViewModel = new SettingViewModel ();
@@ -232,10 +232,10 @@ namespace Ipa
 			//notification for mark attendance.
 
 
-			ForumPage forumPage = new ForumPage ();
-			ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
-			ForumViewModel = forumViewModel;
-			forumPage.BindingContext = forumViewModel;
+	//		ForumPage forumPage = new ForumPage ();
+	//		ForumListPageViewModel forumViewModel = new ForumListPageViewModel (courseList);
+	//		ForumViewModel = forumViewModel;
+	//		forumPage.BindingContext = forumViewModel;
 
 			SettingPage settingPage = new SettingPage ();
 			SettingViewModel settingViewModel = new SettingViewModel ();
