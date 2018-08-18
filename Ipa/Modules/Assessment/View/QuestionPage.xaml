@@ -41,7 +41,7 @@ x:Class="Ipa.QuestionPage">
 			<OnPlatform.Android>10,15,10,10</OnPlatform.Android>
 		</OnPlatform>
 	</StackLayout.Padding>
-                <Label Text="DONE" IsVisible="{Binding IsDone}" TextColor="#FFFFFF" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="12" />					<StackLayout.GestureRecognizers>
+                <Label Text="DONE" IsVisible="{Binding IsDone}" TextColor="#FFFFFF" FontFamily="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="11" />					<StackLayout.GestureRecognizers>
 
 						<TapGestureRecognizer Command="{Binding DoneCmd}" />
 					</StackLayout.GestureRecognizers>

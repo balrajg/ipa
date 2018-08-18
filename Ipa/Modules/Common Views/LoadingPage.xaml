@@ -17,7 +17,7 @@ x:Class="Ipa.LoadingPage">
 
       <StackLayout HorizontalOptions="FillAndExpand">
         <StackLayout HorizontalOptions="FillAndExpand" Padding="20,80,20,20">
-          <Image Source="logo.png"   Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+                    <Image Source="logo_login.png"   Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
         </StackLayout>
         
         

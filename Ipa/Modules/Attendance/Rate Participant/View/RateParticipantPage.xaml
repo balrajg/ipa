@@ -47,7 +47,7 @@ x:Class="Ipa.RateParticipantPage">
 		</StackLayout>
 	  </StackLayout>
 	  <StackLayout HorizontalOptions="End" Padding="10,15,10,10" HeightRequest="25" WidthRequest="35">
-		  <Label Text="DONE" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="13" />
+		  <Label Text="DONE" TextColor="#FFFFFF" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" FontSize="11" />
 		  <StackLayout.GestureRecognizers>
 			  <TapGestureRecognizer Command="{Binding DoneCmd}" />
 		  </StackLayout.GestureRecognizers>

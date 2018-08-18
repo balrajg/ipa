@@ -76,7 +76,7 @@ x:Class="Ipa.SetupUpdatePwdPage">
 			</StackLayout>
 				</StackLayout>
 				<StackLayout Padding="20,20,20,20">
-				<Label Text="Welcome to IPA" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Font="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" TextColor="#FFFFFF" BackgroundColor="#2B91c1" HeightRequest="40" WidthRequest="178" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="16">
+				<Label Text="Welcome to Impact" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Font="{x:Static local:Constants.FontStyle}" FontAttributes="Bold" TextColor="#FFFFFF" BackgroundColor="#2B91c1" HeightRequest="40" WidthRequest="178" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="16">
 				<Label.GestureRecognizers>
 					<TapGestureRecognizer Command="{Binding SubmitCmd}" />
 				</Label.GestureRecognizers>

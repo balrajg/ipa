@@ -145,7 +145,28 @@
 								</ListView.ItemTemplate>
 							</ListView>
 						</StackLayout>
-						<StackLayout Spacing="0" IsVisible="{Binding CanShowMyClassList}">
+                        <StackLayout Spacing="0" IsVisible="{Binding CanShowActivityList}">
+                            <StackLayout Padding="10,0,0,10">
+                                <Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" HeightRequest="42" VerticalTextAlignment="End" TextColor="#8A8A8A" FontSize="12" />
+                            </StackLayout>
+                            <ListView x:Name="ActivityList" ItemsSource="{Binding ActivityList}" SelectedItem="{Binding SelectedActivity, Mode=TwoWay}" SeparatorVisibility="None" BackgroundColor="White" HorizontalOptions="FillAndExpand" RowHeight="{StaticResource ActivityRowHeight}" VerticalOptions="Fill">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <StackLayout Style="{StaticResource Activity}" HeightRequest="{StaticResource Height}">
+                                                    <Label Text="{Binding CourseAttendanceName}" HeightRequest="60" VerticalTextAlignment="Center" TextColor="#2D2D2D" FontSize="13" />
+                                                    <StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
+                                                        <BoxView Style="{StaticResource BoxViewStyle}" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <StackLayout Spacing="0" IsVisible="{Binding CanShowMyClassList}">
 							<StackLayout Padding="10,0,0,10" HeightRequest="42">
 								<Label Text="MY CLASSES" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="End" TextColor="#8A8A8A" FontSize="12" />
 							</StackLayout>
@@ -169,27 +190,7 @@
 								</ListView.ItemTemplate>
 							</ListView>
 						</StackLayout>
-						<StackLayout Spacing="0" IsVisible="{Binding CanShowActivityList}">
-							<StackLayout Padding="10,0,0,10">
-								<Label Text="UPCOMING ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" HeightRequest="42" VerticalTextAlignment="End" TextColor="#8A8A8A" FontSize="12" />
-							</StackLayout>
-							<ListView x:Name="ActivityList" ItemsSource="{Binding ActivityList}" SelectedItem="{Binding SelectedActivity, Mode=TwoWay}" SeparatorVisibility="None" BackgroundColor="White" HorizontalOptions="FillAndExpand" RowHeight="{StaticResource ActivityRowHeight}" VerticalOptions="Fill">
-								<ListView.ItemTemplate>
-									<DataTemplate>
-										<ViewCell>
-											<ViewCell.View>
-												<StackLayout Style="{StaticResource Activity}" HeightRequest="{StaticResource Height}">
-													<Label Text="{Binding CourseAttendanceName}" HeightRequest="60" VerticalTextAlignment="Center" TextColor="#2D2D2D" FontSize="13" />
-													<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,0,0">
-														<BoxView Style="{StaticResource BoxViewStyle}" />
-													</StackLayout>
-												</StackLayout>
-											</ViewCell.View>
-										</ViewCell>
-									</DataTemplate>
-								</ListView.ItemTemplate>
-							</ListView>
-						</StackLayout>
+						
 					</StackLayout>
 				</ScrollView>
 			</StackLayout>

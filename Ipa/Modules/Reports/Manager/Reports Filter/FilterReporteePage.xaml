@@ -65,7 +65,7 @@
 							</StackLayout>
 						</StackLayout>
 						<StackLayout HorizontalOptions="End" Padding="10,15,10,10" HeightRequest="25" WidthRequest="40">
-							<Label Text="DONE" TextColor="#FFFFFF" FontFamily="{x:Static local:Constants.FontStyle}" FontSize="12" VerticalTextAlignment="Center" />
+							<Label Text="DONE" TextColor="#FFFFFF" FontFamily="{x:Static local:Constants.FontStyle}" FontSize="11" VerticalTextAlignment="Center" />
 							<StackLayout.GestureRecognizers>
 								<TapGestureRecognizer Command="{Binding DoneCmd}" />
 							</StackLayout.GestureRecognizers>

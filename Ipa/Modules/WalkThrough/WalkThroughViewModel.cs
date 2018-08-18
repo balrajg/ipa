@@ -12,7 +12,7 @@ namespace Ipa
 		public WalkThroughViewModel ()
 		{
 			IWalkThroughData WalkThroughScreen1 =new WalkThroughData(){
-				Heading="Ipa",
+				Heading="Impact",
 				Source=ImageSource.FromFile("logo_login"),
 				Description="Your personalised learning app"
 			};

@@ -3,8 +3,9 @@
 xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 xmlns:local="clr-namespace:Ipa;assembly=Ipa" 
-xmlns:Controls="clr-namespace:Ipa.Behaviors;assembly=Ipa" 
-x:Class="Ipa.ManagerHomePage" 
+xmlns:Controls="clr-namespace:Ipa.Behaviors;assembly=Ipa"
+xmlns:Views="clr-namespace:Ipa;assembly=Ipa"
+    x:Class="Ipa.ManagerHomePage" 
 Title="">
 	<ContentPage.Icon>
 		<OnPlatform x:TypeArguments="FileImageSource">
@@ -102,7 +103,32 @@ Title="">
 						<StackLayout Spacing="0" IsVisible="{Binding IsMe}" HorizontalOptions="FillAndExpand" BackgroundColor="#EEEEEE">
 							<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 								<StackLayout Spacing="0" HorizontalOptions="FillAndExpand" >
-									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
+                                    <StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
+                                        <Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="42" TextColor="#FFFFFF" FontSize="12" />
+                                    </StackLayout>
+                                    <local:ListSeperator />
+                                    <ListView 
+									x:Name="ActivityList" 
+									ItemsSource="{Binding ParticipantActivityList}" 
+									SelectedItem="{Binding ParticipantSelectedActivity, Mode=TwoWay}" 
+									HorizontalOptions="FillAndExpand" 
+									VerticalOptions="FillAndExpand" 
+									SeparatorVisibility="None" 
+									RowHeight="{StaticResource ActivityRowHeight}" 
+									BackgroundColor="White">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <ViewCell.View>
+                                                        <local:ActivityItemView ActivityName="{Binding ActivityName}" CourseName="{Binding CourseName}" StatusSource="{Binding TimeSource}" IndicatorText="{Binding TimeDescription}">
+                                                        </local:ActivityItemView>
+                                                    </ViewCell.View>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                    <Views:ListSeperator></Views:ListSeperator>
+                                    <StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
 										<Label Text="MY COURSE(S)" FontFamily="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="33" TextColor="#FFFFFF" FontSize="12" />
 									</StackLayout>
 							    <local:ListSeperator />
@@ -127,30 +153,7 @@ Title="">
 										</ListView.ItemTemplate>
 									</ListView>
 									<!--							 -->
-									<StackLayout Padding="10,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#485faa">
-										<Label Text="UPCOMING/OVERDUE ACTIVITIE(S)" Font="{x:Static local:Constants.FontStyle}" VerticalTextAlignment="Center" HeightRequest="42" TextColor="#FFFFFF" FontSize="12" />
-									</StackLayout>
-                  <local:ListSeperator />
-									<ListView 
-									x:Name="ActivityList" 
-									ItemsSource="{Binding ParticipantActivityList}" 
-									SelectedItem="{Binding ParticipantSelectedActivity, Mode=TwoWay}" 
-									HorizontalOptions="FillAndExpand" 
-									VerticalOptions="FillAndExpand" 
-									SeparatorVisibility="None" 
-									RowHeight="{StaticResource ActivityRowHeight}" 
-									BackgroundColor="White">
-										<ListView.ItemTemplate>
-											<DataTemplate>
-												<ViewCell>
-													<ViewCell.View>
-														<local:ActivityItemView ActivityName="{Binding ActivityName}" CourseName="{Binding CourseName}" StatusSource="{Binding TimeSource}" IndicatorText="{Binding TimeDescription}">
-														</local:ActivityItemView>
-													</ViewCell.View>
-												</ViewCell>
-											</DataTemplate>
-										</ListView.ItemTemplate>
-									</ListView>
+									
 								</StackLayout>
 							</ScrollView>
 						</StackLayout>
