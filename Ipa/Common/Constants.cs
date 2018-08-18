@@ -7,7 +7,7 @@ namespace Ipa
 	public class Constants
 	{
 		public static readonly string INSIGHT_API_KEY = "d5efd900f98d801d9e1c4b7a3f125967d1bf1";
-		public static readonly string APP_NAME = "IPA";
+		public static readonly string APP_NAME = "Impact";
 		public static readonly string FontStyle = "Arial";
 		public static readonly string CRValue = "CR";
 		public static readonly string DAValue = "DA";

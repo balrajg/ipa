@@ -13,8 +13,9 @@ using Android.Preferences;
 using Acr.Settings;
 
 namespace Ipa.Droid
+
 {
-	[Activity (Label = "Ipa", MainLauncher = true,   ScreenOrientation = ScreenOrientation.Portrait, WindowSoftInputMode = SoftInput.StateVisible, LaunchMode = LaunchMode.SingleInstance)]
+	[Activity (Label = "Impact", MainLauncher = true,   ScreenOrientation = ScreenOrientation.Portrait, WindowSoftInputMode = SoftInput.StateVisible, LaunchMode = LaunchMode.SingleInstance)]
 
 	public class MainActivity : FormsAppCompatActivity
 	{

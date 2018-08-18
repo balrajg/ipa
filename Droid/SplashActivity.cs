@@ -17,7 +17,7 @@ using Android.Support.V7.App;
 
 namespace Ipa.Droid
 {
-	[Activity (Label = "ipa",NoHistory = true,Theme="@style/MyTheme", Icon = "@drawable/ic_launcher",ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]		
+	[Activity (NoHistory = true,Theme="@style/MyTheme", Icon = "@drawable/Ipa", ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]		
 	public class SplashActivity : AppCompatActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

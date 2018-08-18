@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Ipa</string>
+	<string>Impact</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -31,7 +31,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>CFBundleName</key>
-	<string>Ipa</string>
+	<string>Impact</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -48,11 +48,11 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.ipa</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string> Ipa uses Calendar</string>
+	<string> Impact uses Calendar</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Ipa uses Camera</string>
+	<string>Impact uses Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Ipa uses Photo Library</string>
+	<string>Impact uses Photo Library</string>
 	<key>CFBundleVersion</key>
 	<string>19</string>
 </dict>

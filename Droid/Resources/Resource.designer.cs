@@ -4228,14 +4228,17 @@ namespace Ipa.Droid
 			// aapt resource value: 0x7f0b001a
 			public const int CardView_Light = 2131427354;
 			
-			// aapt resource value: 0x7f0b0175
-			public const int CustomTheme = 2131427701;
+			// aapt resource value: 0x7f0b0176
+			public const int CustomTheme = 2131427702;
 			
 			// aapt resource value: 0x7f0b0172
 			public const int MyTheme = 2131427698;
 			
 			// aapt resource value: 0x7f0b0173
 			public const int MyTheme_Base = 2131427699;
+			
+			// aapt resource value: 0x7f0b0174
+			public const int MyTheme_Splash = 2131427700;
 			
 			// aapt resource value: 0x7f0b0032
 			public const int Platform_AppCompat = 2131427378;
@@ -4309,8 +4312,8 @@ namespace Ipa.Droid
 			// aapt resource value: 0x7f0b0050
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427408;
 			
-			// aapt resource value: 0x7f0b0174
-			public const int SegmentedControlOption = 2131427700;
+			// aapt resource value: 0x7f0b0175
+			public const int SegmentedControlOption = 2131427701;
 			
 			// aapt resource value: 0x7f0b00d1
 			public const int TextAppearance_AppCompat = 2131427537;
